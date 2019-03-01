@@ -15,8 +15,8 @@ public class TwoSum {
         //                 return new int[] {i, j};
         //     throw new IllegalArgumentException("No two sum solution");
         // }
-        // time complexity: O(n)
-        // space complexity: O(n)
+        // time complexity: O(n^2)
+        // space complexity: O(1)
 
         // One-pass Hash Table
         public int[] twoSum(int[] nums, int target) {
@@ -30,5 +30,7 @@ public class TwoSum {
             }
             throw new IllegalArgumentException("No two sum solution");
         }
+        // time complexity: O(n)
+        // space complexity: O(n)
     }
 }
