@@ -8,11 +8,10 @@ public class RemoveElement {
                 nums[x] = nums[i];
             }
         }
-        return x-2;
+        return x+1;
     }
 
     public static void main(String[] args) {
         removeElement(new int[] {0,2,3,4,5,232,1,2},2);
-
     }
 }
