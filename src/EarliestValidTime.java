@@ -111,6 +111,7 @@ public class EarliestValidTime {
 
                 }
             }
+
             //hours
             flag = false;
             for (int i = 9; i > 5; i--) {
