@@ -34,6 +34,5 @@ public class BinaryArrayToDecNum {
         System.out.println(ConvertBinaryArrayToInt(new ArrayList<>(Arrays.asList(0,1,0,1))));
         System.out.println(ConvertBinaryArrayToInt1(new ArrayList<>(Arrays.asList(0,1,0,1))));
         System.out.println(ConvertBinaryArrayToInt2(new ArrayList<>(Arrays.asList(0,1,0,1))));
-
     }
 }
