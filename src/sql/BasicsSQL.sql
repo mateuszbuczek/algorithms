@@ -38,4 +38,6 @@ SELECT continent, name, area FROM world x
     (SELECT area FROM world y
         WHERE y.continent=x.continent
           AND population>0)
-
+--
+SELECT id,stadium,team1,team2
+  FROM game WHERE id = (SELECT matchid FROM goal WHERE player LIKE '%Bender')
