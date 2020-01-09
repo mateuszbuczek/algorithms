@@ -9,6 +9,10 @@ class LinkedList {
         Node next;
 
         Node(int d) {data = d;}
+
+        public Node getNext() {
+            return next;
+        }
     }
 
     static LinkedList insert(LinkedList list, int data) {
