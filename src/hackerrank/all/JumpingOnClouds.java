@@ -1,4 +1,4 @@
-package hackerrank.problemSolving.all;
+package src.hackerrank.all;
 
 public class JumpingOnClouds {
 

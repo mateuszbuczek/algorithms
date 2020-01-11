@@ -1,4 +1,4 @@
-package hackerrank.problemSolving.all;
+package src.hackerrank.all;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

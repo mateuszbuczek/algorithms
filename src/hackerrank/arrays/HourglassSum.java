@@ -1,4 +1,4 @@
-package hackerrank.problemSolving.arrays;
+package src.hackerrank.arrays;
 
 import java.awt.*;
 import java.util.Arrays;
