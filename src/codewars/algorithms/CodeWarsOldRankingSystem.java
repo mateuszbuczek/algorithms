@@ -48,7 +48,22 @@ public class CodeWarsOldRankingSystem {
                 throw new IllegalArgumentException("illegal argument");
             }
 
-            int diff = (exerciseRank + 8) - (rank + 8);
+            int exRankTmp = exerciseRank;
+            int userRankTmp = rank;
+
+            if (userRankTmp > 0) {
+                userRankTmp += 8;
+            } else {
+                userRankTmp +=9;
+            }
+
+            if (exRankTmp > 0) {
+                exRankTmp += 8;
+            } else {
+                exRankTmp += 9;
+            }
+
+            int diff = exRankTmp - userRankTmp;
 
             if (diff == 0) {
                 return 3;
