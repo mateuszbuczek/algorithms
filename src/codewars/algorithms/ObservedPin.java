@@ -11,7 +11,7 @@ public class ObservedPin {
         assertEquals(Arrays.asList("11", "21", "41", "12", "22", "42", "14", "24", "44"), getPINs("11"));
     }
 
-    private static final Map<Character, String> ADJACENTS = new HashMap<Character, String>() {{
+    private static final Map<Character, String> CHARACTER_EXACT_VALUES = new HashMap<Character, String>() {{
         put('1', "124");
         put('2', "2135");
         put('3', "326");
@@ -25,18 +25,18 @@ public class ObservedPin {
     }};
 
     public static List<String> getPINs(String observed) {
+        List<String> result = new ArrayList<>(Collections.singletonList(""));
 
-        List<String> ans = Arrays.asList("");
+        for (char possibleChar : observed.toCharArray()) {
 
-        for (char c : observed.toCharArray()) {
-
-            List<String> tmp = new ArrayList<String>();
-            for (char cc : ADJACENTS.get(c).toCharArray()) {
-                for (String s : ans) tmp.add(s + cc);
+            ArrayList<String> tmp = new ArrayList<>();
+            for (char exactChar : CHARACTER_EXACT_VALUES.get(possibleChar).toCharArray()) {
+                for (String currentString : result) tmp.add(currentString + exactChar);
             }
-            ans = tmp;
+            result = tmp;
         }
-        return ans;
+
+        return result;
     }
 
 }
