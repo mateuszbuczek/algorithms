@@ -18,3 +18,24 @@
     - A cluster agrees that it's received an update when a majority of the nodes in the cluster have acknowledged the update (quorum n/2 + 1.)
     - The need for a quorum indicates how many failures can be tolerated
     - High-Water Mark is used to ensure only data which is guaranteed to be available on the majority of servers is visible to clients.
+   
+###**Hash**
+    - one directional process
+    - hash function takes variable length input and returns fixed length output
+    - should be complex enough to minimize the risk of collision
+    - Hash table stores data in an array of buckets. Generated object hash code is an index
+      that indicates the entry's value location in the array of buckets.
+      During lookup, a hash for the passed key will be calculated and the corresponding value’s location will be found
+      Most often |object -> hash code -> index| (for example 'any' -> 123 -> 5. at index 5 there is a key 123 with object value).
+
+###**Compiler vs Interpreter**
+    - compiler converts code but doesnt execute it, interpreter exexcutes code directly
+    - compiler requires knowledge about target machine, interpreter executes the code
+    - compiler each instruction is translated only once, interpreter same instruction can be analyzed multiple times
+
+###**Concurrency**
+    - multiprocessing - multiple processors executing in parallel - CPU
+    - multitasking - multiple tasks running on a single cpu - Process
+    - multithreading - multiple parts of the same program running - every thread has its own fixed stack - thread is managed by os
+    
+    go - uses small no of threads to execute variable stack space goroutines on them. Main program coordinates assigning goroutine to thread 
